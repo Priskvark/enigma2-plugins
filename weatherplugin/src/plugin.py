@@ -46,12 +46,16 @@ config.plugins.WeatherPlugin.entrycount =  ConfigInteger(0)
 config.plugins.WeatherPlugin.Entry = ConfigSubList()
 initConfig()
 
+def menu(menuid, **kwargs):
+	if menuid == "mainmenu":
+		return [(_("Weather"), main, "weather", 2)]
+	return []
 
 def main(session,**kwargs):
 	session.open(MSNWeatherPlugin)
 
 def Plugins(**kwargs):
-	list = [PluginDescriptor(name=_("Weather Plugin"), description=_("Show Weather Forecast"), where = [PluginDescriptor.WHERE_PLUGINMENU, PluginDescriptor.WHERE_EXTENSIONSMENU], icon = "weather.png", fnc=main)]
+	list = [PluginDescriptor(name=_("Weather Plugin"), description=_("Show Weather Forecast"), where = [ PluginDescriptor.WHERE_MENU], fnc=menu)]
 	return list
 
 class MSNWeatherPlugin(Screen):
