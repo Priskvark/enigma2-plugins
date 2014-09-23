@@ -36,8 +36,8 @@ class AutoTimerList(MenuList):
 	def __init__(self, entries):
 		MenuList.__init__(self, entries, False, content = eListboxPythonMultiContent)
 		self.l.setBuildFunc(self.buildListboxEntry)
-		self.l.setFont(0, gFont("Regular", 20))
-		self.l.setFont(1, gFont("Regular", 17))
+		self.l.setFont(0, gFont("Regular", 28))
+		self.l.setFont(1, gFont("Regular", 28))
 		self.l.setItemHeight(70)
 		self.iconDisabled = LoadPixmap(resolveFilename(SCOPE_SKIN_IMAGE, "skin_default/icons/lock_off.png"))
 		self.iconEnabled = LoadPixmap(resolveFilename(SCOPE_SKIN_IMAGE, "skin_default/icons/lock_on.png"))
@@ -83,8 +83,8 @@ class AutoTimerList(MenuList):
 		width = self.l.getItemSize().width()
 		res = [ None ]
 		x = (2*width) // 3
-		res.append((eListboxPythonMultiContent.TYPE_TEXT, 52, 2, x-26, 25, 0, RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, timer.name))
-		res.append((eListboxPythonMultiContent.TYPE_TEXT, 2, 47, width-4, 25, 1, RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, channel))
+		res.append((eListboxPythonMultiContent.TYPE_TEXT, 100, 2, x-26, 35, 0, RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, timer.name))
+		res.append((eListboxPythonMultiContent.TYPE_TEXT, 2, 43, width-4, 35, 1, RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, channel))
 
 		if timer.include[3]:
 			total = len(timer.include[3])
@@ -108,7 +108,7 @@ class AutoTimerList(MenuList):
 			days = ', '.join(days)
 		else:
 			days = _("Everyday")
-		res.append((eListboxPythonMultiContent.TYPE_TEXT, float(width)/10*4.5+1, 25, float(width)/10*5.5-5, 25, 1, RT_HALIGN_RIGHT|RT_VALIGN_BOTTOM, days))
+		res.append((eListboxPythonMultiContent.TYPE_TEXT, float(width)/10*4.5+1, 35, float(width)/10*5.5-5, 35, 1, RT_HALIGN_RIGHT|RT_VALIGN_BOTTOM, days))
 
 		if timer.hasTimespan():
 			nowt = time()
@@ -118,22 +118,22 @@ class AutoTimerList(MenuList):
 			timespan = ((" %s ... %s") % (FuzzyTime(begintime)[1], FuzzyTime(endtime)[1]))
 		else:
 			timespan = _("Any time")
-		res.append((eListboxPythonMultiContent.TYPE_TEXT, width-150-4, 0, 150, 25, 1, RT_HALIGN_RIGHT|RT_VALIGN_BOTTOM, timespan))
+		res.append((eListboxPythonMultiContent.TYPE_TEXT, width-200-4, 0, 200, 35, 1, RT_HALIGN_RIGHT|RT_VALIGN_BOTTOM, timespan))
 
 		if timer.hasTimeframe():
 			begin = strftime("%a, %d %b", localtime(timer.getTimeframeBegin()))
 			end = strftime("%a, %d %b", localtime(timer.getTimeframeEnd()))
 			timespan = (("%s ... %s") % (begin, end))
-			res.append((eListboxPythonMultiContent.TYPE_TEXT, 2, 25, float(width)/10*4.5-5, 25, 1, RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, timespan))
+			res.append((eListboxPythonMultiContent.TYPE_TEXT, 2, 20, float(width)/10*4.5-5, 35, 1, RT_HALIGN_LEFT|RT_VALIGN_BOTTOM, timespan))
 
 		if icon:
-			res.append((eListboxPythonMultiContent.TYPE_PIXMAP_ALPHATEST, 2, 2, 24, 25, icon))
-		res.append((eListboxPythonMultiContent.TYPE_PIXMAP_ALPHATEST, 28, 5, 24, 25, rectypeicon))
+			res.append((eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, 2, 2, 35, 35, icon))
+		res.append((eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, 50, 2, 30, 30, rectypeicon))
 		try:
 			devide = LoadPixmap(resolveFilename(SCOPE_ACTIVE_SKIN, "div-h.png"))
 		except:
 			devide = LoadPixmap(resolveFilename(SCOPE_CURRENT_SKIN, "skin_default/div-h.png"))
-		res.append((eListboxPythonMultiContent.TYPE_PIXMAP_ALPHATEST, 0, height-2, width, 2, devide))
+		res.append((eListboxPythonMultiContent.TYPE_PIXMAP_ALPHABLEND, 0, height-2, width, 2, devide))
 		return res
 
 	def getCurrent(self):
