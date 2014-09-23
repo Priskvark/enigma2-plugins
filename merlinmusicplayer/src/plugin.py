@@ -2580,22 +2580,22 @@ class iDreamList(GUIComponent, object):
 		res = [ None ]
 		if self.displaySongMode:
 			if item.navigator:
-				res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 3, width , 20, 0, RT_HALIGN_CENTER|RT_VALIGN_CENTER, "%s" % item.text))
+				res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 3, width , 35, 0, RT_HALIGN_CENTER|RT_VALIGN_CENTER, "%s" % item.text))
 			else:
-				res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 3, width - 100 , 20, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, "%s - %s" % (item.title, item.artist)))
-				res.append((eListboxPythonMultiContent.TYPE_TEXT, width - 100,3,100, 20, 1, RT_HALIGN_RIGHT|RT_VALIGN_CENTER, "%s" % item.track))
-				res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 26,width -200, 18, 1, RT_HALIGN_LEFT|RT_VALIGN_CENTER, "%s%s" % (item.album, item.date)))
-				res.append((eListboxPythonMultiContent.TYPE_TEXT, width -200, 26,200, 18, 1, RT_HALIGN_RIGHT|RT_VALIGN_CENTER, "%s" % item.length))
-				res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 47,width -200, 18, 1, RT_HALIGN_LEFT|RT_VALIGN_CENTER, "%s" % item.genre))
-				res.append((eListboxPythonMultiContent.TYPE_TEXT, width -200, 47,200, 18, 1, RT_HALIGN_RIGHT|RT_VALIGN_CENTER, "%s" % item.bitrate))
+				res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 3, width - 100 , 35, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, "%s - %s" % (item.title, item.artist)))
+				res.append((eListboxPythonMultiContent.TYPE_TEXT, width - 100,3,100, 35, 1, RT_HALIGN_RIGHT|RT_VALIGN_CENTER, "%s" % item.track))
+				res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 26,width -200, 35, 1, RT_HALIGN_LEFT|RT_VALIGN_CENTER, "%s%s" % (item.album, item.date)))
+				res.append((eListboxPythonMultiContent.TYPE_TEXT, width -200, 26,200, 35, 1, RT_HALIGN_RIGHT|RT_VALIGN_CENTER, "%s" % item.length))
+				res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 47,width -200, 35, 1, RT_HALIGN_LEFT|RT_VALIGN_CENTER, "%s" % item.genre))
+				res.append((eListboxPythonMultiContent.TYPE_TEXT, width -200, 47,200, 35, 1, RT_HALIGN_RIGHT|RT_VALIGN_CENTER, "%s" % item.bitrate))
 		else:
 			if item.navigator:
-				res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 3, width , 20, 0, RT_HALIGN_CENTER|RT_VALIGN_CENTER, "%s" % item.text))
+				res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 3, width , 35, 0, RT_HALIGN_CENTER|RT_VALIGN_CENTER, "%s" % item.text))
 			else:
 				if item.PTS is None:
-					res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 3, width , 20, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, "%s" % item.text))
+					res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 3, width , 35, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, "%s" % item.text))
 				else:
-					res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 3, width , 20, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, "%s" % item.title))
+					res.append((eListboxPythonMultiContent.TYPE_TEXT, 0, 3, width , 35, 0, RT_HALIGN_LEFT|RT_VALIGN_CENTER, "%s" % item.title))
 		
 		return res
 	
@@ -2603,9 +2603,9 @@ class iDreamList(GUIComponent, object):
 		GUIComponent.__init__(self)
 		self.l = eListboxPythonMultiContent()
 		self.l.setBuildFunc(self.buildEntry)
-		self.l.setFont(0, gFont("Regular", 20))
+		self.l.setFont(0, gFont("Regular", 28))
 		self.l.setFont(1, gFont("Regular", 16))
-		self.l.setItemHeight(22)
+		self.l.setItemHeight(50)
 		self.onSelectionChanged = [ ]
 		self.mode = 0
 		self.displaySongMode = False
@@ -2669,10 +2669,10 @@ class iDreamList(GUIComponent, object):
 		self.mode = mode
 		if mode == 2 or mode == 6 or mode == 8 or mode == 10 or mode == 18 or mode == 19 or mode == 14 or mode == 20:
 			self.displaySongMode = True
-			self.l.setItemHeight(68)
+			self.l.setItemHeight(50)
 		else:
 			self.displaySongMode = False
-			self.l.setItemHeight(22)
+			self.l.setItemHeight(50)
 
 
 class MerlinMediaPixmap(Pixmap):
