@@ -1,2 +1,0 @@
-Description: Downloader-Plugin for Enigma2
-Depends: enigma2, python-twisted-web, python-netclient, python-shell

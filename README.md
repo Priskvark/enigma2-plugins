@@ -1,4 +1,4 @@
-enigma2-plugins
-===============
+enigma2-plugins - 1080p
+=======================
 
-The original enigma2 plugins.
+The new 1080p enigma2 plugins.

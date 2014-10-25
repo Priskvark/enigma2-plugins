@@ -1,5 +1,0 @@
-<keymap>
-	<map context="GlobalActions">
-		<key id="KEY_RADIO" mapto="switchAspectUp" flags="l" />
-	</map>
-</keymap>
