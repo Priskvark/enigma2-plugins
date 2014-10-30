@@ -4,6 +4,7 @@ SUBDIRS = \
 	autotimer \	
 	dreamexplorer \
 	epgrefresh \
+	epgsearch \
 	merlinmusicplayer \
 	mphelp \
 	networkbrowser \

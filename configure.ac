@@ -165,6 +165,11 @@ epgrefresh/src/Makefile
 epgrefresh/src/localehelp/Makefile
 epgrefresh/src/webinterface/Makefile
 
+epgsearch/Makefile
+epgsearch/meta/Makefile
+epgsearch/po/Makefile
+epgsearch/src/Makefile
+
 merlinmusicplayer/Makefile
 merlinmusicplayer/meta/Makefile
 merlinmusicplayer/src/Makefile
