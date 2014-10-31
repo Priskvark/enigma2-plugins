@@ -141,6 +141,12 @@ AM_CONDITIONAL(UPDATE_PO, test "$with_po" = "yes")
 AC_CONFIG_FILES([
 Makefile
 
+audiosync/Makefile
+audiosync/img/Makefile
+audiosync/meta/Makefile
+audiosync/po/Makefile
+audiosync/src/Makefile
+
 autotimer/etc/Makefile
 autotimer/Makefile
 autotimer/meta/Makefile
@@ -170,6 +176,11 @@ epgsearch/meta/Makefile
 epgsearch/po/Makefile
 epgsearch/src/Makefile
 
+imdb/Makefile
+imdb/meta/Makefile
+imdb/po/Makefile
+imdb/src/Makefile
+
 merlinmusicplayer/Makefile
 merlinmusicplayer/meta/Makefile
 merlinmusicplayer/src/Makefile
@@ -187,6 +198,14 @@ networkbrowser/src/Makefile
 networkbrowser/src/icons/Makefile
 networkbrowser/src/lib/Makefile
 networkbrowser/po/Makefile
+
+permanenttimeshift/Makefile
+permanenttimeshift/images/Makefile
+permanenttimeshift/meta/Makefile
+permanenttimeshift/po/Makefile
+permanenttimeshift/src/Makefile
+permanenttimeshift/src/createapscfiles/Makefile
+permanenttimeshift/src/eitsave/Makefile
 
 quickbutton/Makefile
 quickbutton/meta/Makefile

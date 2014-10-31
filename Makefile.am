@@ -1,13 +1,16 @@
 ACLOCAL_AMFLAGS = -I m4
 
 SUBDIRS = \		
+	audiosync \
 	autotimer \	
 	dreamexplorer \
 	epgrefresh \
 	epgsearch \
+	imdb \
 	merlinmusicplayer \
 	mphelp \
 	networkbrowser \
+	permanenttimeshift \
 	quickbutton \
 	toolkit \
 	weatherplugin \
