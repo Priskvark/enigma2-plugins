@@ -199,14 +199,6 @@ networkbrowser/src/icons/Makefile
 networkbrowser/src/lib/Makefile
 networkbrowser/po/Makefile
 
-permanenttimeshift/Makefile
-permanenttimeshift/images/Makefile
-permanenttimeshift/meta/Makefile
-permanenttimeshift/po/Makefile
-permanenttimeshift/src/Makefile
-permanenttimeshift/src/createapscfiles/Makefile
-permanenttimeshift/src/eitsave/Makefile
-
 quickbutton/Makefile
 quickbutton/meta/Makefile
 quickbutton/po/Makefile

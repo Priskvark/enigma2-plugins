@@ -10,7 +10,6 @@ SUBDIRS = \
 	merlinmusicplayer \
 	mphelp \
 	networkbrowser \
-	permanenttimeshift \
 	quickbutton \
 	toolkit \
 	weatherplugin \
