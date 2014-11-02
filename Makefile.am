@@ -6,6 +6,7 @@ SUBDIRS = \
 	dreamexplorer \
 	epgrefresh \
 	epgsearch \
+	fritzcall \
 	imdb \
 	merlinmusicplayer \
 	mphelp \

@@ -176,6 +176,12 @@ epgsearch/meta/Makefile
 epgsearch/po/Makefile
 epgsearch/src/Makefile
 
+fritzcall/Makefile
+fritzcall/meta/Makefile
+fritzcall/po/Makefile
+fritzcall/src/Makefile
+fritzcall/src/images/Makefile
+
 imdb/Makefile
 imdb/meta/Makefile
 imdb/po/Makefile
